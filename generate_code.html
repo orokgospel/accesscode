@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Access Code</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Generate Access code</h1>
+  </header>
+
+  <main>
+    <section id="generate_code">
+      <h2>Access Code Details</h2>
+      <form method="POST" action="/generate_code">
+        
+        <label for="Visitor's Name">Visitor's Name:</label>
+        <input type="text" id="visitorname" name="visitorname" required>
+
+        <label for="Place of Visit">Place of Visit:</label>
+        <input type="text" id="visitaddress" name="visitaddress" required>
+        
+        <label for="resident Name">Name of Resident:</label>
+        <input type="text" id="residentname" name="residentname" required>
+
+        <label for="Expected Day">Expected Day:</label>
+        <input type="date" id="arrivalday" name="arrivalday" required>
+
+        <label for="Expected time of arrival">Expected time of arrival:</label>
+        <input type="time" id="arrivaltime" name="arrivaltime" required>
+        <br>
+        <input type="submit" value="Generate Code">
+        <output type="text" value='Code'>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023@NEAT-IT-Solutions. All rights reserved.</p>
+  </footer>
+</body>
+</html>
