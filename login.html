@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <header>
@@ -12,6 +12,9 @@
   <main>
     <section id="login">
       <h2>Login</h2>
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %}
       <form method="POST" action="/login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
@@ -21,6 +24,7 @@
 
         <input type="submit" value="Login">
       </form>
+      <a href="/">Home-page</a>
     </section>
   </main>
 
